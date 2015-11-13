@@ -4,4 +4,6 @@ comment0.target=NumberDisplay(int)
 comment0.text=\r\n\ Este\ es\ el\ constructor\ de\ nuestra\ clase\ NumberDisplay\ que\ nos\ la\ crea\ con\ un\ valor\ por\r\n\ defecto\ a\ 0\ y\ el\ limite\ se\ lo\ introducimos\ al\ crear\ el\ objeto.\r\n
 comment1.params=nuevoValor
 comment1.target=void\ setValue(int)
-numComments=2
+comment2.params=
+comment2.target=java.lang.String\ getDisplayValue()
+numComments=3

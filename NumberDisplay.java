@@ -40,4 +40,13 @@ public class NumberDisplay
             System.out.println("El valor introducio no es correcto");
         }
     }
+    
+    public String getDisplayValue() 
+    {
+        String valorDisplay = "" + valor;
+        if (valor < 10) {
+            valorDisplay = "0" + valor;
+        }
+        return valorDisplay;
+    }
 }
