@@ -31,6 +31,10 @@ public class NumberDisplay
         limite = valorLimite;
     }
     
+    /**
+     * Método setter que fija el valor actual del display al valor pasado como parámetro 
+     *(nombre del método:setValue).
+     */
     public void setValue(int nuevoValor)
     {
         if ((nuevoValor >= 0) && (nuevoValor < limite)) {
@@ -40,6 +44,10 @@ public class NumberDisplay
             System.out.println("El valor introducio no es correcto");
         }
     }
+    
+    /**
+     * Este método nos devuelve el valor actual del display en forma de cadena de 2 caracteres 
+     */
     
     public String getDisplayValue() 
     {
