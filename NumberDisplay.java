@@ -46,7 +46,8 @@ public class NumberDisplay
     }
     
     /**
-     * Este método nos devuelve el valor actual del display en forma de cadena de 2 caracteres 
+     * Este método nos devuelve el valor actual del display en forma de cadena de 2 caracteres
+     * (nombre del método: getDisplayValue)
      */
     
     public String getDisplayValue() 
@@ -56,5 +57,13 @@ public class NumberDisplay
             valorDisplay = "0" + valor;
         }
         return valorDisplay;
+    }
+    
+    /**
+     * Este método devuelve el valor actual del display como entero (nombre del método: getValue),
+     */
+    public int getValue()
+    {
+        return valor;
     }
 }
