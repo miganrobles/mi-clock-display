@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=valorLimite
+comment0.target=NumberDisplay(int)
+comment0.text=\r\n\ Este\ es\ el\ constructor\ de\ nuestra\ clase\ NumberDisplay\ que\ nos\ la\ crea\ con\ un\ valor\ por\r\n\ defecto\ a\ 0\ y\ el\ limite\ se\ lo\ introducimos\ al\ crear\ el\ objeto.\r\n
+numComments=1
