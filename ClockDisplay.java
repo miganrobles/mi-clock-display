@@ -20,4 +20,6 @@ public class ClockDisplay
     private NumberDisplay horas;
     // Atributos para los minutos
     private NumberDisplay minutos;
+    // Atributo donde almacenar la hora actual
+    private String horaActual;
 }
