@@ -22,4 +22,25 @@ public class ClockDisplay
     private NumberDisplay minutos;
     // Atributo donde almacenar la hora actual
     private String horaActual;
+    
+    /**
+     * Constructor que fija la hora a "00:00"
+     */
+    public ClockDisplay()
+    {
+        horas = new NumberDisplay(24);
+        minutos = new NumberDisplay(60);
+    }
+    
+    /**
+     * Constructor que representan las horas y los minutos a los que fijar la hora actual.
+     */ 
+    public ClockDisplay(int horaActual, int minutosActual)
+    {
+        horas = new NumberDisplay(24);
+        minutos = new NumberDisplay(60);
+        horas.setValue(horaActual);
+        minutos.setValue(minutosActual);
+        
+    }
 }

@@ -1,2 +1,8 @@
 #BlueJ class context
-numComments=0
+comment0.params=
+comment0.target=ClockDisplay()
+comment0.text=\r\n\ Constructor\ que\ fija\ la\ hora\ a\ "00\:00"\r\n
+comment1.params=horaActual\ minutosActual
+comment1.target=ClockDisplay(int,\ int)
+comment1.text=\r\n\ Constructor\ que\ representan\ las\ horas\ y\ los\ minutos\ a\ los\ que\ fijar\ la\ hora\ actual.\r\n
+numComments=2
