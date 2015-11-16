@@ -2,7 +2,10 @@
 comment0.params=
 comment0.target=ClockDisplay()
 comment0.text=\r\n\ Constructor\ que\ fija\ la\ hora\ a\ "00\:00"\r\n
-comment1.params=horaActual\ minutosActual
+comment1.params=horaAct\ minutosAct
 comment1.target=ClockDisplay(int,\ int)
 comment1.text=\r\n\ Constructor\ que\ representan\ las\ horas\ y\ los\ minutos\ a\ los\ que\ fijar\ la\ hora\ actual.\r\n
-numComments=2
+comment2.params=horaAc\ minutosAc
+comment2.target=void\ setTime(int,\ int)
+comment2.text=\r\n\ M\u00E9todo\ setTime\ que\ acepta\ dos\ par\u00E1metros\ de\ tipo\ int,\ que\ representan\ horas\ y\ minutos,\r\n\ y\ que\ fija\ dichos\ valores\ como\ el\ tiempo\ actual\ del\ reloj.\r\n
+numComments=3
