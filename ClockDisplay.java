@@ -30,7 +30,7 @@ public class ClockDisplay
     {
         horas = new NumberDisplay(24);
         minutos = new NumberDisplay(60);
-        horaActual= horas.getDisplayValue()+ ":" + minutos.getDisplayValue();
+        horaActual = horas.getDisplayValue()+ ":" + minutos.getDisplayValue();
     }
     
     /**
@@ -42,7 +42,7 @@ public class ClockDisplay
         minutos = new NumberDisplay(60);
         horas.setValue(horaAct);
         minutos.setValue(minutosAct);
-        horaActual= horas.getDisplayValue()+ ":" + minutos.getDisplayValue();
+        horaActual = horas.getDisplayValue()+ ":" + minutos.getDisplayValue();
     }
     
     /**
@@ -53,6 +53,14 @@ public class ClockDisplay
     {
         horas.setValue(horaAc);
         minutos.setValue(minutosAc);
-        horaActual= horas.getDisplayValue()+ ":" + minutos.getDisplayValue();
+        getTime();
+    }
+    
+    /**
+     * Método getTime que devuelva la hora como String de 5 caracteres.
+     */
+    public String getTime()
+    {
+        return horaActual;
     }
 }
