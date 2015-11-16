@@ -30,7 +30,7 @@ public class ClockDisplay
     {
         horas = new NumberDisplay(24);
         minutos = new NumberDisplay(60);
-        horaActual = horas.getDisplayValue()+ ":" + minutos.getDisplayValue();
+        horaActual= horas.getDisplayValue()+ ":" + minutos.getDisplayValue();
     }
     
     /**
@@ -42,7 +42,7 @@ public class ClockDisplay
         minutos = new NumberDisplay(60);
         horas.setValue(horaAct);
         minutos.setValue(minutosAct);
-        horaActual = horas.getDisplayValue()+ ":" + minutos.getDisplayValue();
+        horaActual= horas.getDisplayValue()+ ":" + minutos.getDisplayValue();
     }
     
     /**
@@ -53,7 +53,7 @@ public class ClockDisplay
     {
         horas.setValue(horaAc);
         minutos.setValue(minutosAc);
-        getTime();
+        horaActual= horas.getDisplayValue()+ ":" + minutos.getDisplayValue();
     }
     
     /**
@@ -62,5 +62,17 @@ public class ClockDisplay
     public String getTime()
     {
         return horaActual;
+    }
+    
+    /**
+     * Método timeTick que hace avanzar un minuto la hora actual.
+     */
+    public void timeTick()
+    {
+        minutos.increment();
+        if (minutos.getValue() == 0) {
+            horas.increment();
+        }
+        horaActual= horas.getDisplayValue()+ ":" + minutos.getDisplayValue();
     }
 }
