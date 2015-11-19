@@ -22,26 +22,33 @@ public class ClockDisplay
     private NumberDisplay minutos;
     // Atributo donde almacenar la hora actual
     private String horaActual;
+    // Atributo para definir si el reloj es de 24 o de 12 horas
+    private boolean formatoHora;
     
     /**
-     * Constructor que fija la hora a "00:00"
+     * Constructor que fija la hora a "00:00" y nos permite elejir si queremos un reloj
+     * en formato de 24 o de 12 horas(si el valor es false funciona como 24 y si es true en formato de 12 horas).
      */
-    public ClockDisplay()
+    public ClockDisplay(boolean formatoH)
     {
         horas = new NumberDisplay(24);
         minutos = new NumberDisplay(60);
+        formatoHora = formatoH;
         modificarDisplay();
+        
     }
     
     /**
-     * Constructor que representan las horas y los minutos a los que fijar la hora actual.
+     * Constructor que representan las horas y los minutos a los que fijar la hora actual y nos permite elejir si queremos un reloj
+     * en formato de 24 o de 12 horas(si el valor es false funciona como 24 y si es true en formato de 12 horas).
      */ 
-    public ClockDisplay(int horaAct, int minutosAct)
+    public ClockDisplay(int horaAct, int minutosAct, boolean formatoH)
     {
         horas = new NumberDisplay(24);
         minutos = new NumberDisplay(60);
         horas.setValue(horaAct);
         minutos.setValue(minutosAct);
+        formatoHora = formatoH;
         modificarDisplay();
     }
     
@@ -81,20 +88,25 @@ public class ClockDisplay
      */
     public void modificarDisplay()
     {
-        String formato = "";
-        int horaAhora = horas.getValue(); 
-        if (horaAhora >= 12){
-            formato = "p.m.";
+        if (formatoHora == true) {
+            String formato = "";
+            int horaAhora = horas.getValue(); 
+            if (horaAhora >= 12){
+                formato = "p.m.";
+            }
+            else {
+                formato = "a.m.";
+            }
+            if (horaAhora > 12) {
+                horaAhora = horaAhora - 12;
+            }
+            if (horaAhora == 0) {
+                horaAhora = 12;
+            }
+            horaActual = horaAhora + ":" + minutos.getDisplayValue() + " " + formato;
         }
         else {
-            formato = "a.m.";
+            horaActual = horas.getDisplayValue() + ":" + minutos.getDisplayValue();
         }
-        if (horaAhora > 12) {
-            horaAhora = horaAhora - 12;
-        }
-        if (horaAhora == 0) {
-            horaAhora = 12;
-        }
-        horaActual = horaAhora + ":" + minutos.getDisplayValue() + " " + formato;
     }
 }
