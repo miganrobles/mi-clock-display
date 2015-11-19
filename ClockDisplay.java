@@ -30,7 +30,7 @@ public class ClockDisplay
     {
         horas = new NumberDisplay(24);
         minutos = new NumberDisplay(60);
-        horaActual= horas.getDisplayValue()+ ":" + minutos.getDisplayValue();
+        modificarDisplay();
     }
     
     /**
@@ -42,7 +42,7 @@ public class ClockDisplay
         minutos = new NumberDisplay(60);
         horas.setValue(horaAct);
         minutos.setValue(minutosAct);
-        horaActual= horas.getDisplayValue()+ ":" + minutos.getDisplayValue();
+        modificarDisplay();
     }
     
     /**
@@ -53,7 +53,7 @@ public class ClockDisplay
     {
         horas.setValue(horaAc);
         minutos.setValue(minutosAc);
-        horaActual= horas.getDisplayValue()+ ":" + minutos.getDisplayValue();
+        modificarDisplay();
     }
     
     /**
@@ -73,6 +73,28 @@ public class ClockDisplay
         if (minutos.getValue() == 0) {
             horas.increment();
         }
-        horaActual= horas.getDisplayValue()+ ":" + minutos.getDisplayValue();
+        modificarDisplay();
+    }
+    
+    /**
+     * Este método hace que nuestro reloj funcione como un reloj en formato de 12 horas en vez de 24.
+     */
+    public void modificarDisplay()
+    {
+        String formato = "";
+        int horaAhora = horas.getValue(); 
+        if (horaAhora >= 12){
+            formato = "p.m.";
+        }
+        else {
+            formato = "a.m.";
+        }
+        if (horaAhora > 12) {
+            horaAhora = horaAhora - 12;
+        }
+        if (horaAhora == 0) {
+            horaAhora = 12;
+        }
+        horaActual = horaAhora + ":" + minutos.getDisplayValue() + " " + formato;
     }
 }
