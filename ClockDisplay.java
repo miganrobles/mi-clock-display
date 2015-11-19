@@ -109,4 +109,18 @@ public class ClockDisplay
             horaActual = horas.getDisplayValue() + ":" + minutos.getDisplayValue();
         }
     }
+    
+      /**
+     * Este método nos permite cambiar el formato de la hora de 12 a 24 dependiento del formato que tenga de hora
+     */
+    public void modifFormato()
+    {
+        if (formatoHora == true) {
+            formatoHora = false;
+        }
+        else {
+            formatoHora = true;
+        }
+        modificarDisplay();
+    }
 }
