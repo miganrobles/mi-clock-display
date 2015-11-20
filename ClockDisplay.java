@@ -1,4 +1,4 @@
-
+import  java.util.Calendar;
 /**
  *Añade al proyecto donde desarrollaste la clase NumberDisplay una nueva clase llamada ClockDisplay. 
  *Esta nueva clase debe:
@@ -44,10 +44,9 @@ public class ClockDisplay
         mes = new NumberDisplay(13);
         dia = new NumberDisplay(31);
         formatoHora = formatoH;
-        year.setValue(15);
-        mes.setValue(11);
-        dia.setValue(20);
-        modificarDisplay();
+        Calendar ahoraCal = Calendar.getInstance();
+        setTime(ahoraCal.get(Calendar.HOUR_OF_DAY), ahoraCal.get(Calendar.MINUTE), 
+        ahoraCal.get(Calendar.YEAR)-2000, ahoraCal.get(Calendar.MONTH)+1, ahoraCal.get(Calendar.DATE));
     }
     
     /**
@@ -62,13 +61,8 @@ public class ClockDisplay
         year = new NumberDisplay(100);
         mes = new NumberDisplay(13);
         dia = new NumberDisplay(31);
-        horas.setValue(horaAct); 
-        minutos.setValue(minutosAct); 
         formatoHora = formatoH;
-        year.setValue(confYear);
-        mes.setValue(confMes);
-        dia.setValue(confDia);
-        modificarDisplay();
+        setTime(horaAct, minutosAct, confYear, confMes, confDia);
     }
     
     /**
